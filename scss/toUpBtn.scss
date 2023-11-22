@@ -1,0 +1,17 @@
+.toUpBtn {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    translate: -10% -50%;
+    width: 73px;
+    height: 73px;
+    background: #100F14;
+    border-radius: 10px;
+    border: none;
+    transition: .2s;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #241952;
+    }
+}
