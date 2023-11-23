@@ -51,6 +51,56 @@ main {
     align-items: center;
     gap: 50px;
 
+
+    .iframe_div {
+        margin-top: 24px;
+
+        .ifram_p_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+
+        p {
+            color: #FFF;
+            font-family: Qanelas;
+            font-size: 65px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: normal;
+        }
+
+        .pTwo {
+            color: #FFF;
+            font-family: Qanelas;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            display: flex;
+            justify-content: space-between;
+            gap: 27px;
+
+
+            img {
+                transform: rotate(90deg);
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        iframe {
+            border-radius: 12px;
+            width: 100%;
+            height: 490px;
+            margin-top: 50px;
+        }
+
+
+
+    }
+
     .movies {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
