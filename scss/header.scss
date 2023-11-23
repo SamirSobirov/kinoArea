@@ -63,16 +63,14 @@ header {
             &:last-child {
                 width: 138px;
                 background: #3657CB;
-                box-shadow: 0px 0px 15px rgba(72, 113, 255, 0.8);
+
                 border-radius: 10px;
                 color: white;
                 font-weight: 700;
                 font-size: 16px;
                 border: 1px solid #3657CB;
 
-                &:hover{
-                    background-color: transparent;
-                }
+            
             }
 
             &:first-child {
