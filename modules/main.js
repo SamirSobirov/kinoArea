@@ -7,6 +7,5 @@ headerCreate(header)
 
 getData("/movie/now_playing")
     .then((res) => {
-        console.log(res.data.results);
         reload(res.data.results, place);
     });
