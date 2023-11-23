@@ -1,3 +1,7 @@
+import { getData } from "/modules/helpers"
+import { setTrailer } from "/modules/main";
+
+
 export function headerCreate(place) {
 	place.innerHTML = ''
 	place.innerHTML = `
@@ -32,5 +36,12 @@ export function reload(arr, place) {
 		let img = document.createElement("img");
 		img.src = "https://image.tmdb.org/t/p/original" + item.poster_path;
 		place.append(img);
+
+
+		img.onclick = () => {
+			getData(`/movie/${item.id}/videos`)
+			.then(res => setTrailer(res.data.results[0]))
+		}
 	}
 }
+
