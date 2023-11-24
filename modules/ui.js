@@ -30,7 +30,11 @@ export function headerCreate(place) {
 }
 
 
+
 export function reload(arr, place) {
+
+
+
 	place.innerHTML = "";
 	for (let item of arr) {
 		let img = document.createElement("img");
@@ -40,8 +44,29 @@ export function reload(arr, place) {
 
 		img.onclick = () => {
 			getData(`/movie/${item.id}/videos`)
-			.then(res => setTrailer(res.data.results[0]))
+				.then(res => setTrailer(res.data.results[0]))
 		}
 	}
-}
+
+	// let genres
+
+			// for (let item of arr) {
+			// 	let genre_str = ''
+			// 	for (let genre of genres) {
+			// 		for (let id of item.genre_ids) {
+			// 			if (id === genre.id) {
+			// 				genre_str += ` ${genre.name},`
+			// 			}
+			// 		}
+			// 	}
+			// }
+		}
+		
+
+
+
+
+
+
+
 
