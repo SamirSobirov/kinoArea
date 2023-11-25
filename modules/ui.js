@@ -4,6 +4,7 @@ import { setTrailer } from "/modules/main";
 
 export function headerCreate(place) {
 	place.innerHTML = ''
+
 	place.innerHTML = `
 		<div class="left">
 			<a href='/'>
@@ -33,11 +34,13 @@ export function headerCreate(place) {
 
 export function reload(arr, place, genres) {
 
-console.log(arr, genres);
+	console.log(arr, genres);
 
 	place.innerHTML = "";
+
 	for (let item of arr) {
 		let img = document.createElement("img");
+		// let p = document.createElement("p")
 		img.src = "https://image.tmdb.org/t/p/original" + item.poster_path;
 		place.append(img);
 
@@ -46,36 +49,23 @@ console.log(arr, genres);
 			getData(`/movie/${item.id}/videos`)
 				.then(res => setTrailer(res.data.results[0]))
 		}
+		// let genresTitles = []
+
+		// for (let id of item.genre_ids) {
+		// 	for (let genre of genres) {
+		// 		if (id === genre.id) {
+		// 			genresTitles.push(genre.name)
+		// 		}
+		// 	}
+		// }
+
+
+		// console.log(genresTitles);
+		// p.innerHTML = genresTitles.join(' ')
+		
 	}
 
-
-
-
-	// let genres
-
-	// 		for (let item of arr) {
-	// 			let genre_str = ''
-	// 			for (let genre of genres) {
-	// 				for (let id of item.genre_ids) {
-	// 					if (id === genre.id) {
-	// 						genre_str += ` ${genre.name},`
-	// 					}
-	// 				}
-	// 			}
-	// 		}
-
-
-
-
-
-	
 }
-
-
-
-
-
-
 
 
 

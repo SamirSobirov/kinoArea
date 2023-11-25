@@ -8,6 +8,10 @@ let header = document.querySelector('header')
 let place = document.querySelector('.movies')
 let iframe = document.querySelector('iframe')
 
+let pop_movies = document.querySelector('.upcoming')
+
+
+
 headerCreate(header)
 
 
@@ -24,11 +28,12 @@ setTrailer(iframe)
 
 
 
-Promise.all([getData('/movie/popular'), getData('/genre/movie/list')])
+Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list')])
     .then(([movies, genres]) => {
         let item = movies.data.results[Math.floor(Math.random() * movies.data.results.length)]
         reload(movies.data.results.slice(0, 8), place, genres.data.genres)
         body.style.backgroundImage = `url(${import.meta.env.VITE_BASE_IMG + item.backdrop_path})`
+        reload(movies.data.results.slice(0, 4), pop_movies, genres.data.genres)
     })
 
 
