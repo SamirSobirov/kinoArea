@@ -28,9 +28,11 @@ getData('/movie/popular')
 
 
 
+
+
 getData('/genre/movie/list')
-    .then(({ data }) => genres = data.genres)
+    .then((genres) => {
+        reload(genres.data.genres);
 
-
-
+    });
 

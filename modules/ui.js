@@ -50,18 +50,24 @@ export function reload(arr, place) {
 
 	// let genres
 
-			// for (let item of arr) {
-			// 	let genre_str = ''
-			// 	for (let genre of genres) {
-			// 		for (let id of item.genre_ids) {
-			// 			if (id === genre.id) {
-			// 				genre_str += ` ${genre.name},`
-			// 			}
-			// 		}
-			// 	}
-			// }
-		}
-		
+	// 		for (let item of arr) {
+	// 			let genre_str = ''
+	// 			for (let genre of genres) {
+	// 				for (let id of item.genre_ids) {
+	// 					if (id === genre.id) {
+	// 						genre_str += ` ${genre.name},`
+	// 					}
+	// 				}
+	// 			}
+	// 		}
+
+
+
+
+
+	
+}
+
 
 
 
