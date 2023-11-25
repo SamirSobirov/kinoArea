@@ -10,11 +10,13 @@ let iframe = document.querySelector('iframe')
 
 let pop_movies = document.querySelector('.upcoming')
 
+let footer_trailer = document.querySelector('.trailers__footer')
 
 
 headerCreate(header)
 
 
+console.log(footer_trailer);
 
 
 export function setTrailer(video) {
@@ -34,6 +36,7 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list')])
         reload(movies.data.results.slice(0, 8), place, genres.data.genres)
         body.style.backgroundImage = `url(${import.meta.env.VITE_BASE_IMG + item.backdrop_path})`
         reload(movies.data.results.slice(0, 4), pop_movies, genres.data.genres)
+        reload(movies.data.results.slice(0, 12), footer_trailer, genres.data.genres)
     })
 
 
