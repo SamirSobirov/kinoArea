@@ -648,14 +648,6 @@ main {
         color: #FFFFFF59;
         transition: .2s;
         cursor: pointer;
-
-        &:hover {
-            color: #FFFFFF;
-        }
-
-        &_act {
-            color: #FFFFFF;
-        }
     }
 
     &__slider-btns {
@@ -841,10 +833,6 @@ footer {
         border-radius: 8px;
         cursor: pointer;
         transition: .3s;
-
-        &:hover {
-            filter: invert(100%);
-        }
     }
 
     &__actions-item-txt {
@@ -861,10 +849,6 @@ footer {
         border-radius: 8px;
         cursor: pointer;
         transition: .3s;
-
-        &:hover {
-            filter: invert(100%);
-        }
     }
 
     &__footer {

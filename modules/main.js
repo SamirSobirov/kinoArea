@@ -17,6 +17,8 @@ export function setTrailer(video) {
     iframe.src = "https://www.youtube.com/embed/" + video.key
 }
 
+setTrailer(iframe)
+
 
 
 getData('/movie/popular')
@@ -27,12 +29,9 @@ getData('/movie/popular')
     })
 
 
-
-
-
 getData('/genre/movie/list')
     .then((genres) => {
         reload(genres.data.genres);
 
-    });
+});
 
