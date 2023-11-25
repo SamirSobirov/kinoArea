@@ -668,6 +668,25 @@ span {
         width: fit-content;
         margin: 54px auto;
     }
+
+    .sliders{
+        align-items: center;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+    .slider-arrow {
+        width: 15px;
+        transform: rotate(-90deg);
+    }
+
+    
+    .slider-arrowTwo {
+        width: 15px;
+        transform: rotate(90deg);
+    }
+}
 }
 
 .upcoming {
