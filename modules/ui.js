@@ -31,9 +31,9 @@ export function headerCreate(place) {
 
 
 
-export function reload(arr, place) {
+export function reload(arr, place, genres) {
 
-
+console.log(arr, genres);
 
 	place.innerHTML = "";
 	for (let item of arr) {
@@ -47,6 +47,9 @@ export function reload(arr, place) {
 				.then(res => setTrailer(res.data.results[0]))
 		}
 	}
+
+
+
 
 	// let genres
 

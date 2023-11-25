@@ -13,9 +13,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    scroll-behavior: smooth;
+    // scroll-behavior: smooth;
 
     &::after {
+        
         content: "";
         display: block;
         height: 100%;

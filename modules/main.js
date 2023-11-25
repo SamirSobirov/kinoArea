@@ -21,17 +21,15 @@ setTrailer(iframe)
 
 
 
-getData('/movie/popular')
-    .then(res => {
-        let item = res.data.results[Math.floor(Math.random() * res.data.results.length)]
-        reload(res.data.results.slice(0, 8), place)
+
+
+
+Promise.all([getData('/movie/popular'), getData('/genre/movie/list')])
+    .then(([movies, genres]) => {
+        let item = movies.data.results[Math.floor(Math.random() * movies.data.results.length)]
+        reload(movies.data.results.slice(0, 8), place, genres.data.genres)
         body.style.backgroundImage = `url(${import.meta.env.VITE_BASE_IMG + item.backdrop_path})`
     })
 
 
-getData('/genre/movie/list')
-    .then((genres) => {
-        reload(genres.data.genres);
-
-});
 
