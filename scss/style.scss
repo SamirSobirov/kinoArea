@@ -126,6 +126,7 @@ main {
             width: 100%;
             height: 100%;
             border-radius: 10px;
+            box-shadow: 12px 9px 10px 0 black;
         }
     }
 
@@ -187,8 +188,9 @@ main {
 }
 
 .trailers__footer {
-    width: 649px;
+    width: 100%;
     height: 352px;
+    border-radius: 26px;
 }
 
 
@@ -637,6 +639,13 @@ span {
     margin-top: 75px;
     color: white;
 
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        box-shadow: 12px 9px 10px 0 black;
+    }
+
     &__header {
         display: flex;
         align-items: center;
@@ -674,24 +683,24 @@ span {
         margin: 54px auto;
     }
 
-    .sliders{
+    .sliders {
         align-items: center;
         text-align: center;
         display: flex;
         justify-content: center;
         gap: 20px;
 
-    .slider-arrow {
-        width: 15px;
-        transform: rotate(-90deg);
-    }
+        .slider-arrow {
+            width: 15px;
+            transform: rotate(-90deg);
+        }
 
-    
-    .slider-arrowTwo {
-        width: 15px;
-        transform: rotate(90deg);
+
+        .slider-arrowTwo {
+            width: 15px;
+            transform: rotate(90deg);
+        }
     }
-}
 }
 
 .upcoming {
