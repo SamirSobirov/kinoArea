@@ -32,6 +32,8 @@ export function headerCreate(place) {
 
 
 
+
+
 export function reload(arr, place, genres) {
 
 	console.log(arr, genres);
@@ -62,10 +64,17 @@ export function reload(arr, place, genres) {
 
 		// console.log(genresTitles);
 		// p.innerHTML = genresTitles.join(' ')
+
+
+		
 		
 	}
 
+	
 }
+
+
+
 
 
 
