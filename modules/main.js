@@ -68,6 +68,7 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
                         reloadPopularPerson(data.results.slice(2), popular_person_cart_cont)
                     })
             })
-
-
     })
+
+
+    
