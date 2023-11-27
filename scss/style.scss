@@ -67,7 +67,6 @@ main {
 
 
     .iframe_div {
-        margin-top: 24px;
 
         .ifram_p_header {
             display: flex;
@@ -225,9 +224,6 @@ main {
         }
     }
 
-    &__header {
-        margin-bottom: 80px;
-    }
 
     &__title {
         white-space: nowrap;
@@ -502,7 +498,7 @@ span {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 60px;
+        // margin-bottom: 60px;
     }
 
     &__title {
@@ -650,7 +646,7 @@ span {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 63px;
+        // margin-bottom: 63px;
     }
 
     &__title {
