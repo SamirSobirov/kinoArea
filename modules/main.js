@@ -14,8 +14,10 @@ let footer_trailer = document.querySelector('.trailers__footer')
 
 let first_section_moreBtn = document.querySelector('.first-section .more')
 
+let upcomingMovies = document.querySelector(".slider-container")
 
 headerCreate(header)
+
 
 
 
@@ -39,6 +41,7 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list')])
         body.style.backgroundImage = `url(${import.meta.env.VITE_BASE_IMG + item.backdrop_path})`
         reload(movies.data.results.slice(0, 4), pop_movies, genres.data.genres)
         reload(movies.data.results.slice(0, 12), footer_trailer, genres.data.genres)
+        reload(movies.data.results.slice(0, 4), upcomingMovies, genres.data.genres)
 
 
 

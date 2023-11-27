@@ -706,6 +706,33 @@ span {
 .upcoming {
     margin-top: 130px;
     color: white;
+    
+    .slider-prev {
+        width: 45px;
+        height: 20px;
+        transform: rotate(-90deg);
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        box-shadow: 0 0 0 0 ;
+        margin-right: 15px;
+    }
+
+
+    .slider-next {
+        // align-items: center;
+        width: 45px;
+        height: 20px;
+        box-shadow: 0 0 0 0 ;
+        transform: rotate(90deg);
+        
+    }
+
+    .slider-btns {
+        align-items: center;
+        display: flex;
+    }
+
 
     img {
         margin-left: 20px;
