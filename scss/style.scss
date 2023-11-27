@@ -706,7 +706,7 @@ span {
 .upcoming {
     margin-top: 130px;
     color: white;
-    
+
     .slider-prev {
         width: 45px;
         height: 20px;
@@ -714,7 +714,7 @@ span {
         align-items: center;
         text-align: center;
         justify-content: center;
-        box-shadow: 0 0 0 0 ;
+        box-shadow: 0 0 0 0;
         margin-right: 15px;
     }
 
@@ -723,9 +723,9 @@ span {
         // align-items: center;
         width: 45px;
         height: 20px;
-        box-shadow: 0 0 0 0 ;
+        box-shadow: 0 0 0 0;
         transform: rotate(90deg);
-        
+
     }
 
     .slider-btns {
@@ -758,6 +758,150 @@ footer {
     min-height: 50px;
     max-width: 1920px;
     margin: 0 auto;
+    margin-top: 80px;
+    height: 458px;
+
+
+    .back_img {
+        background-image: url(../public/images/footer_back_img.svg);
+
+        background: #3657CB;
+        border-radius: 10px;
+        border-radius: 10px;
+
+        height: 470px;
+
+
+        .footer_text {
+            padding-top: 60px;
+            align-items: center;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+
+
+            p {
+                padding-left: 10px;
+                color: #FFF;
+
+                font-family: Qanelas;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+            }
+        }
+
+        .footer_main {
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin-top: 56px;
+
+
+            .header {
+                color: #FFF;
+
+                text-align: center;
+                font-family: Qanelas;
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: normal;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+
+            .main {
+                color: #FFF;
+                text-align: center;
+                font-family: Qanelas;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140.2%;
+                /* 30.844px */
+                margin-top: 20px;
+            }
+
+            input {
+                width: 425px;
+                height: 71px;
+                flex-shrink: 0;
+                border-radius: 10px;
+                background: #FFF;
+                border: none;
+                margin-top: 30px;
+            }
+
+            button {
+                width: 182px;
+                height: 71px;
+                flex-shrink: 0;
+                border-radius: 10px;
+                background: #F2F60F;
+                border: none;
+
+                p {
+                    color: #151A26;
+                    font-family: Qanelas;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 166.5%;
+                    /* 29.97px */
+                }
+            }
+
+            .footer_end {
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                display: flex;
+
+                input {
+              
+                    width: 17px;
+                    height: 17px;
+                    flex-shrink: 0;
+                    border-radius: 2px;
+                    border: 1px solid #F2F60F;
+                    background-color: #F2F60F;
+                    border: none;
+                }
+
+                p {
+                    margin-top: 27px;
+                    margin-left: 10px;
+                  
+                    color: #FFF;
+                    text-align: center;
+                    font-family: Qanelas;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 140.2%;
+                    /* 23.834px */
+
+
+                    a {
+                        color: #F2F60F;
+                        font-family: Qanelas;
+                        font-size: 17px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 140.2%;
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
 }
 
 
