@@ -831,6 +831,17 @@ footer {
                 margin-top: 30px;
             }
 
+            input::placeholder {
+                padding: 22px 0 21px 27px;
+                color: rgba(21, 26, 38, 0.60);
+                font-family: Qanelas;
+                font-size: 17px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 166.5%;
+                /* 28.305px */
+            }
+
             button {
                 width: 182px;
                 height: 71px;
@@ -1136,7 +1147,7 @@ footer {
         align-items: center;
         text-align: center;
         justify-content: center;
-    
+
 
         p {
             color: rgba(227, 230, 240, 0.72);
@@ -1151,7 +1162,7 @@ footer {
         }
 
         a {
-        
+
             color: rgba(227, 230, 240, 0.72);
             text-align: center;
             font-family: Qanelas;
