@@ -13,10 +13,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    // scroll-behavior: smooth;
+    scroll-behavior: smooth;
+    background-image: url(https://image.tmdb.org/t/p/original/kjQBrc00fB2RjHZB3PGR4w9ibpz.jpg);
+
+    
 
     &::after {
-
         content: "";
         display: block;
         height: 100%;

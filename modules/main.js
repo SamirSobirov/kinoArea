@@ -34,11 +34,8 @@ setTrailer(iframe)
 
 
 
-Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list')])
-    .then(([movies, genres]) => {
-        let item = movies.data.results[Math.floor(Math.random() * movies.data.results.length)]
-        reload(movies.data.results.slice(0, 8), place, genres.data.genres)
-        body.style.backgroundImage = `url(${import.meta.env.VITE_BASE_IMG + item.backdrop_path})`
+Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getData('/movie/upcoming')])
+    .then(([movies, genres]) => {     
         reload(movies.data.results.slice(0, 4), pop_movies, genres.data.genres)
         reload(movies.data.results.slice(0, 12), footer_trailer, genres.data.genres)
         reload(movies.data.results.slice(0, 4), upcomingMovies, genres.data.genres)
@@ -49,9 +46,7 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list')])
 
         getData('/movie/popular')
             .then(res => {
-                let item = res.data.results[Math.floor(Math.random() * res.data.results.length)]
                 reload(res.data.results.slice(0, 8), place)
-                body.style.backgroundImage = `url(${import.meta.env.VITE_BASE_IMG + item.backdrop_path})`
 
                 first_section_moreBtn.onclick = () => {
                     let item = first_section_moreBtn
