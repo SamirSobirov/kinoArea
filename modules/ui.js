@@ -34,9 +34,8 @@ export function headerCreate(place) {
 
 
 
-export function reload(arr, place, genres) {
+export function reload(arr, place) {
 
-	console.log(arr, genres);
 
 	place.innerHTML = "";
 
