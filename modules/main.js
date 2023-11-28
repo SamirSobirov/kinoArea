@@ -1,3 +1,4 @@
+import { trail } from "./ui";
 import { getData } from "/modules/helpers";
 import { headerCreate, reload } from "/modules/ui";
 
@@ -23,6 +24,10 @@ headerCreate(header)
 
 
 
+
+
+
+
 export function setTrailer(video) {
     iframe.src = "https://www.youtube.com/embed/" + video.key
 }
@@ -34,11 +39,12 @@ setTrailer(iframe)
 
 
 
+
 Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getData('/movie/upcoming')])
-    .then(([movies, genres]) => {     
+    .then(([movies, genres]) => {
         reload(movies.data.results.slice(0, 4), pop_movies, genres.data.genres)
-        reload(movies.data.results.slice(0, 12), footer_trailer, genres.data.genres)
         reload(movies.data.results.slice(0, 4), upcomingMovies, genres.data.genres)
+        trail(movies.data.results, footer_trailer)
 
 
 
@@ -47,6 +53,9 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
         getData('/movie/popular')
             .then(res => {
                 reload(res.data.results.slice(0, 8), place)
+
+
+
 
                 first_section_moreBtn.onclick = () => {
                     let item = first_section_moreBtn
@@ -59,6 +68,8 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
                         item.dataset.count = 'not-all'
                         item.innerHTML = 'Все новинки'
                     }
+
+
                 }
 
 
@@ -71,4 +82,3 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
     })
 
 
-    
