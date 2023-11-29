@@ -1,4 +1,4 @@
-import { trail, reloadPopularPerson} from "./ui";
+import { trail, reloadPopularPerson } from "./ui";
 import { getData } from "/modules/helpers";
 import { headerCreate, reload } from "/modules/ui";
 
@@ -19,6 +19,8 @@ let upcomingMovies = document.querySelector(".slider-container")
 
 let popular_person_cont = document.querySelector('.popular_person_cont')
 let popular_person_cart_cont = document.querySelector('.popular-persons__list')
+
+
 
 headerCreate(header)
 
@@ -52,17 +54,20 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
 
 
         getData('/person/popular')
-        .then(({ data }) => {
-            reloadPopularPerson(data.results.slice(0, 2), popular_person_cont)
-            reloadPopularPerson(data.results.slice(2), popular_person_cart_cont)
-        })
+            .then(({ data }) => {
+                reloadPopularPerson(data.results.slice(0, 2), popular_person_cont)
+                reloadPopularPerson(data.results.slice(2), popular_person_cart_cont)
+            })
 
 
 
         getData('/movie/popular')
             .then(res => {
                 reload(res.data.results.slice(0, 8), place)
+                body.style.backgroundImage = `url(${import.meta.env.VITE_BASE_URL + item.backdrop_path})`
 
+
+                console.log(itrem.backdrop_path);
 
 
 
@@ -79,10 +84,12 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
                     }
 
 
+
                 }
 
 
-               
+                
+
             })
     })
 
