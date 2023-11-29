@@ -698,9 +698,12 @@ span {
         display: flex;
         justify-content: center;
         gap: 20px;
+        margin-top: 30px;
+        
 
         .slider-arrow {
             width: 15px;
+            box-shadow: 0 0 0 0;
             transform: rotate(-90deg);
         }
 
@@ -708,6 +711,7 @@ span {
         .slider-arrowTwo {
             width: 15px;
             transform: rotate(90deg);
+            box-shadow: 0 0 0 0;
         }
     }
 }
