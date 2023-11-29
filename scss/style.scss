@@ -766,6 +766,11 @@ span {
         
     }
 
+    img:hover {
+        filter: brightness(100%) sepia(100%);;
+         
+    }
+
     &__header {
         display: flex;
         align-items: center;
