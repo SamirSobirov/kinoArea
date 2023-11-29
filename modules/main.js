@@ -1,4 +1,4 @@
-import { trail } from "./ui";
+import { trail, reloadPopularPerson} from "./ui";
 import { getData } from "/modules/helpers";
 import { headerCreate, reload } from "/modules/ui";
 
@@ -17,7 +17,11 @@ let first_section_moreBtn = document.querySelector('.first-section .more')
 
 let upcomingMovies = document.querySelector(".slider-container")
 
+let popular_person_cont = document.querySelector('.popular_person_cont')
+let popular_person_cart_cont = document.querySelector('.popular-persons__list')
+
 headerCreate(header)
+
 
 
 
@@ -47,6 +51,11 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
         trail(movies.data.results, footer_trailer)
 
 
+        getData('/person/popular')
+        .then(({ data }) => {
+            reloadPopularPerson(data.results.slice(0, 2), popular_person_cont)
+            reloadPopularPerson(data.results.slice(2), popular_person_cart_cont)
+        })
 
 
 
@@ -73,11 +82,7 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
                 }
 
 
-                getData('/person/popular')
-                    .then(({ data }) => {
-                        reloadPopularPerson(data.results.slice(0, 2), popular_person_cont)
-                        reloadPopularPerson(data.results.slice(2), popular_person_cart_cont)
-                    })
+               
             })
     })
 
