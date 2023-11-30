@@ -1248,9 +1248,7 @@ footer {
         border-radius: 20px;
         background-color: rgb(0, 0, 0);
         opacity: 90%;
-        // display: flex;
-        // justify-content: center;
-        align-items: center;
+        // align-items: center;
         
     }
     .box {
@@ -1270,7 +1268,7 @@ footer {
         color: white;
         font-weight: bold;
         .search_input{
-            width: 90%;
+            width: 500px;
             height: 50px;
             border: none;
             border-radius: 10px;
@@ -1287,8 +1285,8 @@ footer {
             background-color: yellow;
 
             /* #F2F60F */
-            width: 42px;
-            height: 42px;
+            width: 52px;
+            height: 50px;
             border-radius: 12px;
             align-items: center;
             text-align: center;
