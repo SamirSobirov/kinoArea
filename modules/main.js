@@ -22,11 +22,8 @@ let popular_person_cart_cont = document.querySelector('.popular-persons__list')
 
 
 
+
 headerCreate(header)
-
-
-
-
 
 
 
@@ -64,12 +61,6 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
         getData('/movie/popular')
             .then(res => {
                 reload(res.data.results.slice(0, 8), place)
-                body.style.backgroundImage = `url(${import.meta.env.VITE_BASE_URL + item.backdrop_path})`
-
-
-                console.log(itrem.backdrop_path);
-
-
 
                 first_section_moreBtn.onclick = () => {
                     let item = first_section_moreBtn
@@ -82,14 +73,7 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
                         item.dataset.count = 'not-all'
                         item.innerHTML = 'Все новинки'
                     }
-
-
-
                 }
-
-
-                
-
             })
     })
 
