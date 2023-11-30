@@ -78,3 +78,25 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
     })
 
 
+
+
+const search_btn = document.querySelector('button[data-popup="search"]');
+let search_input = document.querySelector('.search_input');
+let btn_close = document.getElementById("close");
+let search_box = document.querySelector('.search_box');
+
+console.log(btn_close);
+
+search_btn.onclick = () => {
+    search_box.classList.add('visible');
+    document.body.style.overflow = 'hidden';
+};
+
+search_input.onkeyup = () => {
+    processChange();
+};
+
+btn_close.onclick = () => {
+    search_box.classList.remove('visible');
+    document.body.style.overflow = 'auto';
+};
