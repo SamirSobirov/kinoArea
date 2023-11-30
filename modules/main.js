@@ -85,7 +85,8 @@ let search_input = document.querySelector('.search_input');
 let btn_close = document.getElementById("close");
 let search_box = document.querySelector('.search_box');
 
-console.log(btn_close);
+
+
 
 search_btn.onclick = () => {
     search_box.classList.add('visible');

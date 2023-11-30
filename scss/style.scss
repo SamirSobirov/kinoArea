@@ -800,6 +800,7 @@ footer {
         position: relative;
         border-radius: 13px;
         
+        
         .back_img::before {
             content: '';
             position: absolute;
@@ -1241,6 +1242,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: .3s ease;
 
 
     img {
