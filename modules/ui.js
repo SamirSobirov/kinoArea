@@ -73,7 +73,7 @@ export function reloadPopularPerson(arr, place) {
 			for (let item of arr) {
 				place.innerHTML += `
 			<div class="popular-persons__box">
-			<img class="popular-persons__photo" src="${import.meta.env.VITE_BASE_IMG + item.profile_path}" alt="image">
+			<img class="popular-persons__photo" src="${`https://image.tmdb.org/t/p/original` + item.profile_path}" alt="image">
 				<div class="popular-persons__num">${arr.indexOf(item) + 1}-е место</div>
 				<div class="popular-persons__box-item">
 					<div class="popular-persons__name">${item.name}</div>
