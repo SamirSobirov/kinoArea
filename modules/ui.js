@@ -58,6 +58,7 @@ export function reload(arr, place) {
 
 			location.assign(`/pages/movieid.html?id=${item.id}"`)
 
+			// location.assign(`http://localhost:5173/pages/movie/?id=` + item.id)
 		}
 	}
 
