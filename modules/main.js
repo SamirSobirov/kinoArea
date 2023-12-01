@@ -47,7 +47,7 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
     .then(([movies, genres]) => {
         reload(movies.data.results.slice(0, 4), pop_movies, genres.data.genres)
         reload(movies.data.results.slice(0, 4), upcomingMovies, genres.data.genres)
-        trail(movies.data.results, footer_trailer)
+        trail(movies.data.results.slice(0,100), footer_trailer)
 
 
         getData('/person/popular')
@@ -101,3 +101,10 @@ btn_close.onclick = () => {
     search_box.classList.remove('visible');
     document.body.style.overflow = 'auto';
 };
+
+
+
+// getData(`/person/3194176/images`)
+//     .then(res => {
+//     })
+//     .then(res => {})
