@@ -135,18 +135,18 @@ btn_close.onclick = () => {
 
 
 
-// .nw_playing //
-let genre_list = document.querySelector('.genres ul')
+// // .nw_playing //
+// let genre_list = document.querySelector('.genres ul')
 
-getData('/genre/movie/list')
-    .then((genres_res) => {
-        const {
-            data: {
-                genres
-            }
-        } = genres_res
+// getData('/genre/movie/list')
+//     .then((genres_res) => {
+//         const {
+//             data: {
+//                 genres
+//             }
+//         } = genres_res
 
-        reload_genres(genres, genre_list)
-    })
+//         reload_genres(genres, genre_list)
+//     })
 
-    console.log(genre_list);
+//     console.log(genre_list);

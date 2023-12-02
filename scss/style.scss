@@ -1287,7 +1287,7 @@ footer {
     text-align: center;
     justify-content: center;
 
-    
+
 
     .close {
         align-items: end;
@@ -1321,20 +1321,20 @@ footer {
         justify-content: center;
         align-items: center;
         position: relative;
-      }
-      
-      .close_box {
+    }
+
+    .close_box {
         position: absolute;
         top: 0;
         // right: 300px;
         left: 900px;
-      
+
         .close_button {
             width: 25px;
             height: 25px;
         }
 
-      }
+    }
 
     .search_movie {
         position: absolute;
@@ -1387,135 +1387,141 @@ footer {
             fill: black;
         }
 
-        .search_boxs {
+
+.movies_searched {
+
+    display: flex;
+    gap: 30px;
+
+        .movie_box {
+            gap: 10px;
+            width: 500px;
             display: flex;
+            flex-direction: column;
+            max-height: 548px;
+            overflow-y: scroll;
 
-            .movie_box {
+            .result_item_movie {
+                background-color: rgb(61, 113, 255);
                 width: 100%;
+                height: 137px;
+                border-radius: 15px;
+                box-shadow: 0 0 15px black;
                 display: flex;
-                flex-direction: column;
-                min-height: fit-content;
-                max-height: fit-content;
-                overflow-y: scroll;
+                justify-content: start;
+                align-items: center;
 
-                .result_item_movie {
-                    background-color: rgb(30, 37, 56);
-                    width: 100%;
-                    height: 137px;
-                    border-radius: 15px;
-                    box-shadow: 0 0 15px black;
-                    display: flex;
-                    justify-content: start;
-                    align-items: center;
-
-                    img {
-                        padding: 0 1%;
-                        height: 90%;
-                        border-radius: 10px;
-                    }
-
-                    .movie_info {
-                        width: 100%;
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        padding: 0 20px;
-
-                        .movie_info_left {
-                            .movie_name {
-                                font-size: 20px;
-                                font-weight: bold;
-                                color: white;
-                                padding-bottom: 5px;
-                            }
-
-                            .movie_original_name {
-                                color: grey;
-                            }
-
-                            .movie_genre {
-                                color: rgb(242, 246, 15);
-                            }
-                        }
-
-                        .movie_info_right {
-                            width: 50px;
-                            height: 30px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            background-color: rgb(75, 203, 54);
-                            border-radius: 8px;
-
-                            p {
-                                font-size: 20px;
-                                color: white;
-                                font-weight: 30px;
-                            }
-                        }
-                    }
+                img {
+                    padding: 0 1%;
+                    height: 90%;
+                    border-radius: 10px;
                 }
-            }
 
-            .actor_box {
-                width: 700px;
-                display: flex;
-                flex-direction: column;
-                max-height: 548px;
-                overflow-y: scroll;
-
-                .actor_item {
-                    background-color: rgb(30, 37, 56);
+                .movie_info {
                     width: 100%;
-                    min-height: 137px;
-                    border-radius: 15px;
-                    box-shadow: 0 0 15px black;
                     display: flex;
-                    justify-content: start;
+                    justify-content: space-between;
                     align-items: center;
+                    padding: 0 20px;
 
-                    .actor_img {
-                        padding: 0 1%;
-                        height: 90%;
-                        border-radius: 10px;
-                    }
-
-                    .actor_title_box {
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: start;
-                        padding: 0 20px;
-
-                        .actor_name {
+                    .movie_info_left {
+                        .movie_name {
                             font-size: 20px;
                             font-weight: bold;
                             color: white;
                             padding-bottom: 5px;
                         }
 
-                        .actor_original_name {
+                        .movie_original_name {
                             color: grey;
                         }
 
-                        .actor_post {
+                        .movie_genre {
                             color: rgb(242, 246, 15);
+                        }
+                    }
+
+                    .movie_info_right {
+                        width: 50px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: rgb(75, 203, 54);
+                        border-radius: 8px;
+
+                        p {
+                            font-size: 20px;
+                            color: white;
+                            font-weight: 30px;
                         }
                     }
                 }
             }
         }
 
-        ::-webkit-scrollbar {
-            width: 5px;
+        .actor_box {
+            gap: 10px;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            max-height: 548px;
+            overflow-y: scroll;
+
+            .actor_item {
+                background-color: rgb(61, 113, 255);
+                width: 100%;
+                min-height: 137px;
+                border-radius: 15px;
+                box-shadow: 0 0 15px black;
+                display: flex;
+                justify-content: start;
+                align-items: center;
+
+                .actor_img {
+                    padding: 0 1%;
+                    height: 90%;
+                    border-radius: 10px;
+                }
+
+                .actor_title_box {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    padding: 0 20px;
+
+                    .actor_name {
+                        font-size: 20px;
+                        font-weight: bold;
+                        color: white;
+                        padding-bottom: 5px;
+                    }
+
+                    .actor_original_name {
+                        color: grey;
+                    }
+
+                    .actor_post {
+                        color: rgb(242, 246, 15);
+                    }
+                }
+            }
         }
     }
+}
 
     ::-webkit-scrollbar {
         width: 5px;
     }
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
 .visible {
     display: block;
 }
+
