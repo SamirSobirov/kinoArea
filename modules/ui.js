@@ -149,7 +149,7 @@ export function reload_genres(arr, place) {
 
 
 
-/////////////////// SEARCH_MOVIE_&_ACTORS_RELOAD ///////////////////
+// SEARCH_MOVIE
 export function reload_search_movie(arr, place, genres) {
     place.innerHTML = ""
     for (let movie of arr) {
