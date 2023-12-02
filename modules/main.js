@@ -1,6 +1,6 @@
 import { trail, reloadPopularPerson } from "./ui";
 import { getData } from "/modules/helpers";
-import { headerCreate, reload ,reload_search_movie, reload_search_actor,} from "/modules/ui";
+import { headerCreate, reload, reload_search_movie, reload_search_actor, } from "/modules/ui";
 
 
 
@@ -47,7 +47,7 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
     .then(([movies, genres]) => {
         reload(movies.data.results.slice(0, 4), pop_movies, genres.data.genres)
         reload(movies.data.results.slice(0, 4), upcomingMovies, genres.data.genres)
-        trail(movies.data.results.slice(0,100), footer_trailer)
+        // trail(movies.data.results.slice(0,100), footer_trailer)
 
 
         getData('/person/popular')
@@ -56,6 +56,12 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
                 reloadPopularPerson(data.results.slice(2), popular_person_cart_cont)
             })
 
+
+
+        getData('/movie/top_rated')
+            .then((res) => {
+                trail(res.data.results, footer_trailer);
+            })
 
 
         getData('/movie/popular')

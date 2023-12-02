@@ -213,13 +213,14 @@ main {
 
 
 .trailers__footer {
-    .box {}
 
+    display: flex;
+    width: 100%;
+   
     img {
-        // background-image: url(../public/icons/play.svg);
-        border-radius: 26px;
-        width: 600px;
-        height: 300px;
+        width: 180px;
+        border-radius: 8px;
+
     }
 }
 
