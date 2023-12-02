@@ -81,7 +81,7 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
 
 //search
 const search_btn = document.querySelector('button[data-popup="search"]');
-// let search_btn = document.querySelector('.search__button')
+
 let search_input = document.querySelector('.search_input');
 let btn_close = document.getElementById("close");
 let search_box = document.querySelector('.search_box');
