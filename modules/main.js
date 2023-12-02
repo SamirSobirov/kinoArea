@@ -1,6 +1,6 @@
 import { trail, reloadPopularPerson } from "./ui";
 import { getData } from "/modules/helpers";
-import { headerCreate, reload } from "/modules/ui";
+import { headerCreate, reload ,reload_search_movie, reload_search_actor,} from "/modules/ui";
 
 
 
@@ -79,19 +79,48 @@ Promise.all([getData('/movie/now_playing'), getData('/genre/movie/list'), getDat
 
 
 
-
+//search
 const search_btn = document.querySelector('button[data-popup="search"]');
+// let search_btn = document.querySelector('.search__button')
 let search_input = document.querySelector('.search_input');
 let btn_close = document.getElementById("close");
 let search_box = document.querySelector('.search_box');
+let results_box = document.querySelector('.movie_box')
+let actor_box = document.querySelector('.actor_box')
+
+function debounce(func, timeout = 600) {
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+            func.apply(this, args);
+        }, timeout);
+    };
+}
 
 
+
+function saveInput() {
+    Promise.all([getData(`/search/movie?query=${search_input.value}&page=1`), getData('/genre/movie/list'), getData(`/search/person?query=${search_input.value}`)])
+        .then(([movies, genres, actors]) => {
+            reload_search_movie(movies.data.results, results_box, genres.data.genres)
+            reload_search_actor(actors.data.results, actor_box);
+        })
+}
+getData(`/search/person?query=statham&page=1`)
+    .then((res) => {
+        // reload_search_actor(res.data.results, actor_box);
+    })
+
+const processChange = debounce(() => saveInput())
 
 
 search_btn.onclick = () => {
     search_box.classList.add('visible');
     document.body.style.overflow = 'hidden';
 };
+
+console.log(search_btn);
 
 search_input.onkeyup = () => {
     processChange();
@@ -101,6 +130,7 @@ btn_close.onclick = () => {
     search_box.classList.remove('visible');
     document.body.style.overflow = 'auto';
 };
+
 
 
 
