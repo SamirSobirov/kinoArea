@@ -215,14 +215,43 @@ main {
 .trailers__footer {
 
     display: flex;
-    width: 100%;
-   
-    img {
-        width: 180px;
-        border-radius: 8px;
+    align-items: start;
+    gap: 20px;
+    overflow-x: scroll;
+    height: fit-content;
+
+    .footer_trailer_box {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        height: fit-content;
+        position: relative;
+    }
+        .back_img{
+            width: 400px;
+            border-radius: 10px;
+            height: 320px;
+        }                    
+        .play_img{
+            background: url('../public/icons/play_footer_trailer.svg');
+            width: 80px;
+            height: 80px;
+            // position: absolute;
+            // top: 40%;
+            // left: 50%;
+            cursor: pointer;
+        }
+        .trailer_genre {
+            padding: 20px 0;
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+        }
 
     }
-}
+
+
 
 
 
@@ -1389,128 +1418,128 @@ footer {
         }
 
 
-.movies_searched {
+        .movies_searched {
 
-    display: flex;
-    gap: 30px;
-
-        .movie_box {
-            gap: 10px;
-            width: 500px;
             display: flex;
-            flex-direction: column;
-            max-height: 548px;
-            overflow-y: scroll;
+            gap: 30px;
 
-            .result_item_movie {
-                background-color: rgb(61, 113, 255);
-                width: 100%;
-                height: 137px;
-                border-radius: 15px;
-                box-shadow: 0 0 15px black;
+            .movie_box {
+                gap: 10px;
+                width: 500px;
                 display: flex;
-                justify-content: start;
-                align-items: center;
+                flex-direction: column;
+                max-height: 548px;
+                overflow-y: scroll;
 
-                img {
-                    padding: 0 1%;
-                    height: 90%;
-                    border-radius: 10px;
-                }
-
-                .movie_info {
+                .result_item_movie {
+                    background-color: rgb(61, 113, 255);
                     width: 100%;
+                    height: 137px;
+                    border-radius: 15px;
+                    box-shadow: 0 0 15px black;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: start;
                     align-items: center;
-                    padding: 0 20px;
 
-                    .movie_info_left {
-                        .movie_name {
+                    img {
+                        padding: 0 1%;
+                        height: 90%;
+                        border-radius: 10px;
+                    }
+
+                    .movie_info {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 20px;
+
+                        .movie_info_left {
+                            .movie_name {
+                                font-size: 20px;
+                                font-weight: bold;
+                                color: white;
+                                padding-bottom: 5px;
+                            }
+
+                            .movie_original_name {
+                                color: grey;
+                            }
+
+                            .movie_genre {
+                                color: rgb(242, 246, 15);
+                            }
+                        }
+
+                        .movie_info_right {
+                            width: 50px;
+                            height: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgb(75, 203, 54);
+                            border-radius: 8px;
+
+                            p {
+                                font-size: 20px;
+                                color: white;
+                                font-weight: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .actor_box {
+                gap: 10px;
+                width: 500px;
+                display: flex;
+                flex-direction: column;
+                max-height: 548px;
+                overflow-y: scroll;
+
+                .actor_item {
+                    background-color: rgb(61, 113, 255);
+                    width: 100%;
+                    min-height: 137px;
+                    border-radius: 15px;
+                    box-shadow: 0 0 15px black;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+
+                    .actor_img {
+                        padding: 0 1%;
+                        height: 90%;
+                        border-radius: 10px;
+                    }
+
+                    .actor_title_box {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        padding: 0 20px;
+
+                        .actor_name {
                             font-size: 20px;
                             font-weight: bold;
                             color: white;
                             padding-bottom: 5px;
                         }
 
-                        .movie_original_name {
+                        .actor_original_name {
                             color: grey;
                         }
 
-                        .movie_genre {
+                        .actor_post {
                             color: rgb(242, 246, 15);
                         }
-                    }
-
-                    .movie_info_right {
-                        width: 50px;
-                        height: 30px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: rgb(75, 203, 54);
-                        border-radius: 8px;
-
-                        p {
-                            font-size: 20px;
-                            color: white;
-                            font-weight: 30px;
-                        }
-                    }
-                }
-            }
-        }
-
-        .actor_box {
-            gap: 10px;
-            width: 500px;
-            display: flex;
-            flex-direction: column;
-            max-height: 548px;
-            overflow-y: scroll;
-
-            .actor_item {
-                background-color: rgb(61, 113, 255);
-                width: 100%;
-                min-height: 137px;
-                border-radius: 15px;
-                box-shadow: 0 0 15px black;
-                display: flex;
-                justify-content: start;
-                align-items: center;
-
-                .actor_img {
-                    padding: 0 1%;
-                    height: 90%;
-                    border-radius: 10px;
-                }
-
-                .actor_title_box {
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: start;
-                    padding: 0 20px;
-
-                    .actor_name {
-                        font-size: 20px;
-                        font-weight: bold;
-                        color: white;
-                        padding-bottom: 5px;
-                    }
-
-                    .actor_original_name {
-                        color: grey;
-                    }
-
-                    .actor_post {
-                        color: rgb(242, 246, 15);
                     }
                 }
             }
         }
     }
-}
 
     ::-webkit-scrollbar {
         width: 5px;
@@ -1525,4 +1554,3 @@ footer {
 .visible {
     display: block;
 }
-

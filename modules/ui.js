@@ -3,9 +3,9 @@ import { setTrailer } from "/modules/main";
 
 
 export function headerCreate(place) {
-	place.innerHTML = ''
+    place.innerHTML = ''
 
-	place.innerHTML = `
+    place.innerHTML = `
 		<div class="left">
 			<a href='/'>
 				<img src="/public/images/logo.svg" alt="image">
@@ -41,36 +41,36 @@ export function headerCreate(place) {
 export function reload(arr, place) {
 
 
-	place.innerHTML = "";
+    place.innerHTML = "";
 
-	for (let item of arr) {
+    for (let item of arr) {
 
-		let img = document.createElement("img");
-
-
-		img.src = "https://image.tmdb.org/t/p/original" + item.poster_path;
-		place.append(img);
+        let img = document.createElement("img");
 
 
-		place.onclick = () => {
-			// getData(`/movie/${item.id}/videos`)
-			// 	.then(res => setTrailer(res.data.results[0]))
+        img.src = "https://image.tmdb.org/t/p/original" + item.poster_path;
+        place.append(img);
 
-			location.assign(`/pages/movieid.html?id=${item.id}`)
 
-		}
-	}
+        place.onclick = () => {
+            // getData(`/movie/${item.id}/videos`)
+            // 	.then(res => setTrailer(res.data.results[0]))
+
+            location.assign(`/pages/movieid.html?id=${item.id}`)
+
+        }
+    }
 
 }
 
 
 
 export function reloadPopularPerson(arr, place) {
-	if (place) {
-		place.innerHTML = ''
-		if (arr.length === 2) {
-			for (let item of arr) {
-				place.innerHTML += `
+    if (place) {
+        place.innerHTML = ''
+        if (arr.length === 2) {
+            for (let item of arr) {
+                place.innerHTML += `
 			<div class="popular-persons__box">
 			<img class="popular-persons__photo" src="${`https://image.tmdb.org/t/p/original` + item.profile_path}" alt="image">
 				<div class="popular-persons__num">${arr.indexOf(item) + 1}-е место</div>
@@ -81,10 +81,10 @@ export function reloadPopularPerson(arr, place) {
 				</div>
 			</div>
 			`
-			}
-		} else {
-			for (let item of arr) {
-				place.innerHTML += `
+            }
+        } else {
+            for (let item of arr) {
+                place.innerHTML += `
 				<div class="popular-persons__cart">
 					<div class="popular-persons__cart-item">
 						<div class="popular-persons__name">${item.name}</div>
@@ -94,28 +94,44 @@ export function reloadPopularPerson(arr, place) {
 					<div class="popular-persons__num">${arr.indexOf(item) + 3}-е место</div>
 				</div>
 			`
-			}
-		}
-	}
+            }
+        }
+    }
 }
 
 
 
 export function trail(arr, place) {
-	place.innerHTML = ""
-	for (let item of arr) {
-		let img = document.createElement("img");
+    place.innerHTML = ""
+    for (let item of arr) {
+        let footer_trailer_box = document.createElement('div')
+        let img = document.createElement("img");
+        let trailer_genre = document.createElement('p')
+        let play_img = document.createElement('div')
 
-		img.src = "https://image.tmdb.org/t/p/original" + item.poster_path
 
-		img.onclick = () => {
-			let footer_trailer = document.querySelector('.trailers__iframe')
-			getData(`/movie/${item.id}/videos`)
-				.then(res => setTrailer(res.data.results[0]))
-		}
+        footer_trailer_box.classList.add('footer_trailer_box')
+        img.classList.add('back_img')
+        trailer_genre.classList.add('trailer_genre')
+        play_img.classList.add('play_img')
 
-		place.append(img)
-	}
+
+
+        img.src = "https://image.tmdb.org/t/p/original" + item.poster_path
+
+
+
+
+        img.onclick = () => {
+            getData(`/movie/${item.id}/videos`)
+                .then(res => setTrailer(res.data.results[0]))
+        }
+
+        place.append(img)
+
+
+
+    }
 
 }
 
