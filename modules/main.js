@@ -107,10 +107,7 @@ function saveInput() {
             reload_search_actor(actors.data.results, actor_box);
         })
 }
-getData(`/search/person?query=statham&page=1`)
-    .then((res) => {
-        // reload_search_actor(res.data.results, actor_box);
-    })
+
 
 const processChange = debounce(() => saveInput())
 
