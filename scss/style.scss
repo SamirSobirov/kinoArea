@@ -174,13 +174,18 @@ main {
         .genre {
             width: 100%;
             overflow: hidden;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            display: flex;
 
             ul {
                 display: flex;
                 justify-content: space-between;
                 gap: 22px;
-                color: white;
+                color: rgb(166, 166, 166);
                 list-style: none;
+                
                 overflow-x: scroll;
 
                 li {
@@ -206,7 +211,7 @@ main {
         }
 
         .act_txt {
-            color: white;
+            color: rgb(255, 255, 255);
         }
     }
 }
@@ -228,28 +233,31 @@ main {
         height: fit-content;
         position: relative;
     }
-        .back_img{
-            width: 400px;
-            border-radius: 10px;
-            height: 320px;
-        }                    
-        .play_img{
-            background: url('../public/icons/play_footer_trailer.svg');
-            width: 80px;
-            height: 80px;
-            // position: absolute;
-            // top: 40%;
-            // left: 50%;
-            cursor: pointer;
-        }
-        .trailer_genre {
-            padding: 20px 0;
-            font-size: 30px;
-            color: white;
-            font-weight: bold;
-        }
 
+    .back_img {
+        width: 400px;
+        border-radius: 10px;
+        height: 320px;
     }
+
+    .play_img {
+        background: url('../public/icons/play_footer_trailer.svg');
+        width: 80px;
+        height: 80px;
+        // position: absolute;
+        // top: 40%;
+        // left: 50%;
+        cursor: pointer;
+    }
+
+    .trailer_genre {
+        padding: 20px 0;
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+    }
+
+}
 
 
 
@@ -1607,19 +1615,20 @@ footer {
             }
 
             .hover_bg_btn {
-            background-color: #131e48;
-            box-shadow: 0 0 15px black;
-            border-radius: 5px;
-            border: none;
-            color: white;
-            font-size: 20px;
-            font-weight: bold;
-            padding: 0 30px;
-            height: 40px;
-            cursor: pointer;
-            margin-bottom: 30px;
+                background-color: #131e48;
+                box-shadow: 0 0 15px black;
+                border-radius: 5px;
+                border: none;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 0 30px;
+                height: 40px;
+                cursor: pointer;
+                margin-bottom: 30px;
             }
-            .hover_bg_btn:hover{
+
+            .hover_bg_btn:hover {
                 background-color: #1a2a68;
             }
         }
