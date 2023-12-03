@@ -253,7 +253,7 @@ export function reload_search_actor(arr, place) {
 
 //horror or comedy movies
 export function reload_movies(arr, place) {
-    place.innerHTML = ""
+    place.innerHTML = "";
 
     for (let item of arr) {
         let li = document.createElement('li')
@@ -267,7 +267,7 @@ export function reload_movies(arr, place) {
             let now_playing = document.querySelector('.now_playing')
 
             getData('/discover/movie?with_genres=' + item.id)
-                .then(res => reload_movie(res.data.results, now_playing, arr))
+                .then(res => reload_movies(res.data.results, now_playing, arr))
         }
     }
 }

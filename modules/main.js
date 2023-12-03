@@ -1,6 +1,6 @@
 import { trail, reloadPopularPerson } from "./ui";
 import { getData } from "/modules/helpers";
-import { headerCreate, reload, reload_search_movie, reload_search_actor } from "/modules/ui";
+import { headerCreate, reload, reload_search_movie, reload_search_actor, reload_movies } from "/modules/ui";
 
 
 
@@ -149,7 +149,7 @@ getData('/genre/movie/list')
             }
         } = genres_res
 
-        reload_genres(genres, genre_list)
+        reload_movies(genres, genre_list)
     })
 
     console.log(genre_list);

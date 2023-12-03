@@ -184,9 +184,9 @@ main {
                 overflow-x: scroll;
 
                 li {
-                    height: 25px;
+                    height: 38px;
                     text-align: center;
-                    font-weight: bold;
+                    font-weight: 700;
                     cursor: pointer;
                     opacity: 70%;
                 }
@@ -1553,4 +1553,105 @@ footer {
 
 .visible {
     display: block;
+}
+
+
+
+
+.now_playing {
+    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+
+    .item_movie {
+        width: 100%;
+        min-height: 100%;
+        position: relative;
+
+        .poster_movie {
+            width: 100%;
+            height: 80%;
+            background-size: cover;
+            border-radius: 15px;
+            box-shadow: 0 0 15px black;
+            opacity: 100%;
+            position: relative;
+        }
+
+        .hover_bg {
+            width: 100%;
+            height: 80%;
+            background: linear-gradient(45deg, rgba(54, 87, 203, 0.651), rgba(54, 86, 203, 0), rgba(54, 87, 203, 0.651));
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius: 15px;
+            box-shadow: inset 0 0 50px black;
+            justify-content: center;
+            align-items: end;
+            display: none;
+            animation: hover .5s linear forwards;
+
+            @keyframes hover {
+                from {
+                    opacity: 0%;
+                }
+
+                to {
+                    opacity: 100%;
+                }
+            }
+
+            .hover_bg_btn {
+            background-color: #131e48;
+            box-shadow: 0 0 15px black;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0 30px;
+            height: 40px;
+            cursor: pointer;
+            margin-bottom: 30px;
+            }
+            .hover_bg_btn:hover{
+                background-color: #1a2a68;
+            }
+        }
+
+        .name_movie {
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .genre_movie {
+            color: gold;
+            font-size: 15px;
+        }
+
+        .rating_box {
+            width: 65px;
+            height: 35px;
+            border-radius: 5px;
+            background-color: rgb(137, 203, 54);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+
+            .rating {
+                color: white;
+                font-weight: bold;
+            }
+        }
+    }
 }
