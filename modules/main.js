@@ -132,5 +132,6 @@ search_input.onkeyup = () => {
 btn_close.onclick = () => {
     search_box.classList.remove('visible');
     document.body.style.overflow = 'auto';
+    
 };
 
