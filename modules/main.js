@@ -1,6 +1,6 @@
 import { trail, reloadPopularPerson } from "./ui";
 import { getData } from "/modules/helpers";
-import { headerCreate, reload, reload_search_movie, reload_search_actor, } from "/modules/ui";
+import { headerCreate, reload, reload_search_movie, reload_search_actor } from "/modules/ui";
 
 
 

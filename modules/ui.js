@@ -249,3 +249,25 @@ export function reload_search_actor(arr, place) {
 
 
 
+
+
+//horror or comedy movies
+export function reload_movies(arr, place) {
+    place.innerHTML = ""
+
+    for (let item of arr) {
+        let li = document.createElement('li')
+
+        li.innerHTML = item.name
+        li.id = item.id
+
+        place.append(li)
+
+        li.onclick = () => {
+            let now_playing = document.querySelector('.now_playing')
+
+            getData('/discover/movie?with_genres=' + item.id)
+                .then(res => reload_movie(res.data.results, now_playing, arr))
+        }
+    }
+}
