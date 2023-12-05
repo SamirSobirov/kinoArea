@@ -52,11 +52,11 @@ export function reload(arr, place) {
         place.append(img);
 
 
-        place.onclick = () => {
+        img.onclick = () => {
             // getData(`/movie/${item.id}/videos`)
             // 	.then(res => setTrailer(res.data.results[0]))
 
-            location.assign(`/pages/movieid.html?id=${item.id}`)
+            location.assign(`/pages/movie/?id=${item.id}`)
 
         }
     }
