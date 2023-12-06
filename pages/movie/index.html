@@ -7,58 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/scss/style.scss">
     <link rel="stylesheet" href="/scss/header.scss">
-    <link rel="stylesheet" href="../scss/movieid.scss">
-
+    <link rel="stylesheet" href="/scss/movieid.scss">
+    <link rel="stylesheet" href="/scss/toUpBtn.scss">
+    <link rel="stylesheet" href="/scss/popup.scss">
     <title>Document</title>
 </head>
 
 <body>
 
-    <header>
-        <div class="left">
-            <a href='/'>
-                <img src="/public/images/logo.svg" alt="image">
-            </a>
-            <img src="/public/images/menu.svg" alt="image">
-        </div>
-        <nav>
-            <a href="#">Афиша</a>
-            <a href="#">Медиа</a>
-            <a href="#">Фильмы</a>
-            <a href="#">Актёры</a>
-            <a href="#">Новости</a>
-            <a href="#">Подборки</a>
-            <a href="#">Категории</a>
-        </nav>
-        <div class="right">
-            <button data-popup="search">
-                <img src="/public/icons/search.svg" alt="icon">
-            </button>
-            <button data-popup="sign-in">Войти</button>
-        </div>
-    </header>
+    <header></header>
     <main>
 
         <section class="first-section">
             <div class="first-section__header">
                 <div class="first-section__header-wrapper">
                     <div class="first-section__header-left">
-                        <img class="first-section__poster" src="../public/images/background_img2.jpg" alt="image">
+                        <img class="first-section__poster" src="/public/images/logo.svg" alt="image">
                     </div>
                     <div class="first-section__header-right">
                         <div class="first-section__location">
-                            <!-- <span class="first-section__location-item">
+                            <span class="first-section__location-item">
                                 Главная >
-                            </span> -->
-                            <!-- <span class="first-section__location-item">
+                            </span>
+                            <span class="first-section__location-item">
                                 Фильмы >
-                            </span> -->
-                            <!-- <span class="first-section__location-item first-section__location-item_active">
-                                TROLLS
-                            </span> -->
+                            </span>
+                            <span class="first-section__location-item first-section__location-item_active">
+                                Побег из Претории
+                            </span>
                         </div>
-                        <div class="first-section__title">TROLLS</div>
-                        <div class="first-section__sub-title"></div>
+                        <div class="first-section__title">Побег из Претории</div>
+                        <div class="first-section__sub-title">Escape from Pretoria</div>
                         <div class="first-section__charts">
                             <canvas class="first-section__chart" id="kinoarea"></canvas>
                             <canvas class="first-section__chart" id="imdb"></canvas>
@@ -141,7 +120,7 @@
             <div class="main-characters__header">
                 <h1 class="main-characters__title">В главных ролях:</h1>
                 <a href="" class="main-characters__link">
-                    <!-- <span class="main-characters__more">Все актёры</span> -->
+                    <span class="main-characters__more">Все актёры</span>
                     <img class="main-characters__more-arrow" src="/public/icons/arrow.svg" alt="icon">
                 </a>
             </div>
@@ -149,10 +128,12 @@
         </section>
 
     </main>
+    <footer></footer>
 
+    <div class="popup"></div>
+    <div class="toUpBtnCont"></div>
 
-    <script type="module" src="../movie/movieid.js"></script>
-
+    <script type="module" src="/modules/movieid.js"></script>
 </body>
 
 </html>

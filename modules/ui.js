@@ -137,26 +137,7 @@ export function trail(arr, place) {
 
 
 
-//now_playing
-export function reload_genres(arr, place) {
-    place.innerHTML = ""
 
-    for (let item of arr) {
-        let li = document.createElement('li')
-
-        li.innerHTML = item.name
-        li.id = item.id
-
-        place.append(li)
-
-        li.onclick = () => {
-            let now_playing = document.querySelector('.now_playing')
-
-            getData('/discover/movie?with_genres=' + item.id)
-                .then(res => reload_movie(res.data.results, now_playing, arr))
-        }
-    }
-}
 
 
 
