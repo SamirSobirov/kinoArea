@@ -28,14 +28,6 @@ export function headerCreate(place) {
     `
 }
 
-export function createtoUpBtn(place) {
-	place.innerHTML += `
-	<button class="toUpBtn">
-	<img class="toUpBtn__icon" src="/public/icons/arrow.svg" alt="icon">
-	</button>
-    `
-	document.querySelector('.toUpBtn').onclick = () => document.documentElement.scrollTop = 0
-}
 
 let genres
 
@@ -91,7 +83,7 @@ export function reload(arr, place) {
 						<img src="${import.meta.env.VITE_BASE_IMG + item.poster_path}" alt="image">
 						<span>${item.vote_average}</span>
 						<a href="/pages/movieid.html?id=${item.id}">
-							<button></button>
+							<button>Карточка фильма</button>
 						</a>
 					</div>
 					<div class="name__genre">
