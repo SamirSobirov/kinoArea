@@ -1,5 +1,5 @@
 import { createtoUpBtn, headerCreate, reloadActors } from "./ui";
-import { getData } from "./helpers";
+import { getData } from "./http";
 import { modalToggleActivate } from "./main";
 let header = document.querySelector('header')
 let body = document.body
@@ -10,9 +10,8 @@ let fav_arr = JSON.parse(localStorage.getItem('fav_movies')) || []
 if (fav_arr.includes(movie_id)) {
     fav_icon.classList.add('liked')
 } else {
-    fav_icon.classList.remove('liked')
+    fav_icon.classList.remove('liked')  
 }
-
 
 fav_icon.onclick = () => {
     if (fav_arr.includes(movie_id)) {

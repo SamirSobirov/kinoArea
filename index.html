@@ -7,7 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" href="/scss/style.scss">
 	<link rel="stylesheet" href="/scss/header.scss">
-	<title>KINOAREA</title>
+	<link rel="stylesheet" href="/scss/slider.scss">
+	<title>Kinoarea samir</title>
 </head>
 
 <body>
@@ -16,85 +17,54 @@
 		<section class="first-section">
 			<div class="genres">
 				<h1>Сейчас в кино</h1>
-
-				<div class="genre">
-					<ul>
-						<!-- <li class="all active">Все</li> -->
-						<!-- <li>Боевик</li>
-						<li>Приключения</li>
-						<li>Мультфильм</li>
-						<li>Комедия</li>
-						<li>Фантастика</li>
-						<li>Триллер</li>
-						<li>Криминал</li>
-						<li>Документальный</li>
-						<li>Драма</li>
-						<li>Семейный</li>
-						<li>Фэнтези</li>
-						<li>История</li>
-						<li>Ужасы</li>
-						<li>Музыка</li>
-						<li>Детектив</li>
-						<li>Мелодрама</li>
-						<li>Телевизионный</li>
-						<li>Военный</li>
-						<li>Вестерн</li> -->
-					</ul>
-				</div>
+				<div></div>
+				<nav>
+					<p class="act_txt">Все</p>
+					<p>Боевики</p>
+					<p>Приключения</p>
+					<p>Комедии</p>
+					<p>Фантастика</p>
+					<p>Триллеры</p>
+					<p>Драма</p>
+				</nav>
 			</div>
-			
-			<!-- <div class="now_playing"></div> -->
-			
-			<div class="movies">
-				<div class="title_genres">
-				</div>
-			</div>
+			<div class="movies"></div>
 			<button data-count="not-all" class="more">Все новинки</button>
-			
-
-			<div class="iframe_div" style="width: 100%;">
-
-				<div class="ifram_p_header">
-
-					<p>Новые трейлеры</p>
-					<p class="pTwo">Все трейлеры <img src="./public/icons/arrow.svg" alt=""></p>
-
-				</div>
-
-
+		</section>
+		<section class="trailers">
+			<div class="trailers__header header">
+				<h1 class="trailers__title trailers__title_big">Новые трейлеры</h1>
+				<a href="#" class="trailers__more">
+					<p class="trailers__more-txt">Все трейлеры</p>
+					<img class="trailers__more-icon" src="/public/icons/arrow.svg" alt="icon">
+				</a>
+			</div>
+			<div class="trailers__main">
 				<div class="trailers__vid trailers__vid_big">
-					<iframe class="trailers__iframe trailers__iframe_big" src="" frameborder="1"
-						allowfullscreen></iframe>
+					<iframe class="trailers__iframe trailers__iframe_big"
+						src="" frameborder="0" allowfullscreen></iframe>
 					<img class="trailers_play-icon" src="/public/icons/play.svg" alt="icon">
 				</div>
-
-
-				<div class="trailers">
-
-					<h1 class="trailers__title trailers__title_medium">Форсаж 9</h1>
-					<img class="trailers__share-img" src="/public/images/menu.svg" alt="image">
-					<img class="trailers__share-icon" src="/public/icons/menu_icon.svg" alt="icon">
-					<!-- <img class="trailers_play-icon" src="/public/icons/play.svg" alt="icon"> -->
-
-					<div class="trailers_likes">
-						<div class="trailers__actions-item">
+				<div class="trailers__actions">
+					<div class="trailers__share">
+						<h1 class="trailers__title trailers__title_medium">Форсаж 9</h1>
+						<img class="trailers__share-img" src="/public/images/menu.svg" alt="image">
+						<img class="trailers__share-icon" src="/public/icons/menu_icon.svg" alt="icon">
+					</div>
+					<div class="trailers__actions-items">
+						<div class="trailers__actions-item trailers__actions-item_like">
 							<img src="/public/icons/like.svg" alt="icon" class="trailers__actions-item-icon-like">
-							<div class="trailers_actions-txt">3 245</div>
+							<div class="trailers__actions-item-txt">3 245</div>
 						</div>
-						<div class="trailers__actions-item">
+						<div class="trailers__actions-item trailers__actions-item_dislike">
 							<img src="/public/icons/like.svg" alt="icon" class="trailers__actions-item-icon-dislike">
-							<div class="trailers_actions-txt">420</div>
+							<div class="trailers__actions-item-txt">420</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-
+			<div class="trailers__footer"></div>
 		</section>
-		<div class="trailers__footer"></div>
-
-
-
 		<section class="popular-movies">
 			<div class="popular-movies__header">
 				<h1 class="popular-movies__title">Популярные фильмы</h1>
@@ -109,25 +79,19 @@
 					<p class="popular-movies__nav-item">2018</p>
 				</nav>
 			</div>
-
-
 			<div class="popular-movies__slider slider">
-				<div class="popular-movies">
-					<div class="upcoming"></div>
-
-					<div class="sliders">
-						<img class="slider-arrow" src="./public/icons/arrow.svg" alt="">
-
-						<p>4/15</p>
-
-						<img class="slider-arrowTwo" src="./public/icons/arrow.svg" alt="">
+				<div class="popular-movies__slider-container slider-container"></div>
+				<div class="popular-movies__slider-btns slider-btns">
+					<img class="popular-movies__slider-prev slider-prev" src="/public/icons/arrow.svg" alt="icon">
+					<div class="popular-movies__slider-fraction slider-fraction">
+						<span>0</span>
+						/
+						<span>0</span>
 					</div>
-
+					<img class="popular-movies__slider-next slider-next" src="/public/icons/arrow.svg" alt="icon">
 				</div>
 			</div>
 		</section>
-
-
 		<section class="popular-persons">
 			<div class="popular-persons__header">
 				<h1 class="popular-persons__title">Популярные персоны</h1>
@@ -161,18 +125,15 @@
 				</div>
 			</div>
 		</section>
-
-
-
-
-
 		<section class="upcoming">
 			<div class="upcoming__header">
 				<h1 class="upcoming__title">Ожидаемые новинки</h1>
 				<div class="upcoming__slider-btns slider-btns">
 					<img class="upcoming__slider-prev slider-prev" src="/public/icons/arrow.svg" alt="icon">
 					<div class="upcoming__slider-fraction slider-fraction">
-						<p> 4 / 16</p>
+						<span>0</span>
+						/
+						<span>0</span>
 					</div>
 					<img class="upcoming__slider-next slider-next" src="/public/icons/arrow.svg" alt="icon">
 				</div>
@@ -181,110 +142,87 @@
 				<div class="upcoming__slider-container slider-container"></div>
 			</div>
 		</section>
+	</main>
+
+	<div class="popup"></div>
+	<div class="toUpBtnCont"></div>
 
 
-		<footer>
-			<div class="back_img">
-				<div class="footer_text">
-					<img src="./public/images/footer_cinema_logo.svg" alt="">
-					<p>Kinoarea</p>
-				</div>
 
-				<div class="footer_main">
-					<p class="header">Подпишитесь на E-mail рассылку</p>
 
-					<p class="main">Если хотиет быть в курсе последних новостей и новинок кино - <br> заполните форму
-						ниже и оформите бесплатную E-mail рассылку! </p>
+	
 
-					<input type="email" placeholder="Введите свой E-mail адрес">
 
-					<button>
-						<p>Подписаться </p>
-					</button>
 
-					<div class="footer_end">
-						<input type="checkbox">
 
-						<p>Соглашаюсь на условия <a href="#">политики конфиденциальности</a> </p>
-					</div>
-				</div>
-			</div>
-		</footer>
 
-		<div class="footer_after">
 
-			<div class="images">
-				<img src="./public/images/footer_logo.svg" alt="">
+
+
+	<footer>
+		<div class="back_img">
+			<div class="footer_text">
+				<img src="./public/images/footer_cinema_logo.svg" alt="">
+				<p>Kinoarea</p>
 			</div>
 
-			<br>
+			<div class="footer_main">
+				<p class="header">Подпишитесь на E-mail рассылку</p>
 
-			<div class="catalog">
-				<a href="#">Афиша</a>
-				<a href="#">Новости</a>
-				<a href="#">Персоны</a>
-				<a href="#">Рейтинги</a>
-				<a href="#">Рецензии</a>
-				<a href="#">Каталог фильмов</a>
-			</div>
+				<p class="main">Если хотиет быть в курсе последних новостей и новинок кино - <br> заполните форму
+					ниже и оформите бесплатную E-mail рассылку! </p>
 
+				<input type="email" placeholder="Введите свой E-mail адрес">
 
-			<div class="end">
-				<p>2020 © Kinoarea. Все права защищены</p>
+				<button>
+					<p>Подписаться </p>
+				</button>
 
-				<a href="#">Политика конфиденциальности</a>
-			</div>
-			<div></div>
-		</div>
+				<div class="footer_end">
+					<input type="checkbox">
 
-
-
-		<div class="search_box">
-
-			<div class="modal_bg" data-close></div>
-
-			<div class="search_movie">
-
-				<div class="input_box">
-					<input class="search_input" type="text" placeholder="What movie ?">
-					<button class="search__button">
-						<svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
-							<g>
-								<path
-									d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z">
-								</path>
-							</g>
-						</svg>
-					</button>
-
-					<div class="close_box">
-						<img class="close_button" id="close" src="./public/icons/popup-close.svg" alt="">
-					</div>
-
-				</div>
-
-
-				<div class="movies_searched">
-					<div class="movie_box">
-					</div>
-					<div class="actor_box">
-					</div>
-				</div>
-
-
-				<div class="search_boxs">
-					<div class="movie_box">
-					</div>
-					<div class="actor_box">
-					</div>
+					<p>Соглашаюсь на условия <a href="#">политики конфиденциальности</a> </p>
 				</div>
 			</div>
 		</div>
+	</footer>
 
 
 
-		<style>
-			.back_img {
+
+
+	<div class="footer_after">
+
+		<div class="images">
+			<img src="./public/images/footer_logo.svg" alt="">
+		</div>
+
+		<br>
+
+		<div class="catalog">
+			<a href="#">Афиша</a>
+			<a href="#">Новости</a>
+			<a href="#">Персоны</a>
+			<a href="#">Рейтинги</a>
+			<a href="#">Рецензии</a>
+			<a href="#">Каталог фильмов</a>
+		</div>
+
+
+		<div class="end">
+			<p>2020 © Kinoarea. Все права защищены</p>
+
+			<a href="#">Политика конфиденциальности</a>
+		</div>
+		<div></div>
+	</div>
+
+
+
+
+	
+	<style>
+		.back_img {
 				width: 100%;
 				height: 510px;
 				background: url('../public/images/footer_back_img.svg');
@@ -330,7 +268,11 @@
 				color: #fff;
 			}
 		</style>
-		<script type="module" src="modules/main.js"></script>
+	</style>
+	
+	
+
+	<script type="module" src="modules/main.js"></script>
 </body>
 
 </html>
