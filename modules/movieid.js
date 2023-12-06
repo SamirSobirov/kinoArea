@@ -1,28 +1,10 @@
-import { createtoUpBtn, headerCreate, reloadActors } from "./ui";
+import { headerCreate, reloadActors } from "./ui";
 import { getData } from "./http";
 import { modalToggleActivate } from "./main";
 let header = document.querySelector('header')
 let body = document.body
 let movie_id = location.search.split('=').at(-1)
-let fav_icon = document.querySelector('.first-section__header-bottom-icon_heart')
-let fav_arr = JSON.parse(localStorage.getItem('fav_movies')) || []
 
-if (fav_arr.includes(movie_id)) {
-    fav_icon.classList.add('liked')
-} else {
-    fav_icon.classList.remove('liked')  
-}
-
-fav_icon.onclick = () => {
-    if (fav_arr.includes(movie_id)) {
-        fav_arr = fav_arr.filter(id => id !== movie_id)
-        fav_icon.classList.remove('liked')
-    } else {
-        fav_arr.push(movie_id)
-        fav_icon.classList.add('liked')
-    }
-    localStorage.setItem('fav_movies', JSON.stringify(fav_arr))
-}
 
 headerCreate(header)
 modalToggleActivate()
@@ -103,30 +85,3 @@ getData(`/movie/${movie_id}`)
         poster.src = import.meta.env.VITE_BASE_IMG + data.poster_path
     })
 
-
-function reloadMovieCrews(arr, place) {
-    place.innerHTML = ''
-    arr.forEach((el, idx) => {
-        if (idx !== arr.length - 1) {
-            if (el.name !== '' || false) {
-                place.innerHTML += `${el.name}, `
-            } else {
-                place.innerHTML += 'Никого не найдено!'
-            }
-        } else {
-            if (el.name !== '' || false) {
-                place.innerHTML += `${el.name}`
-            } else {
-                place.innerHTML += 'Никого не найдено!'
-            }
-        }
-    })
-}
-
-// getData(`/movie/${movie_id}/videos`)
-//     .then(res => {
-//         let video = res.data.results[Math.floor(Math.random() * res.data.results.length)]
-//     })
-
-// getData(`/movie/${movie_id}/credits`)
-//     .then(res => console.log(res))
