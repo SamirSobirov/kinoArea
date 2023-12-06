@@ -336,19 +336,19 @@ main {
         button {
             border-radius: 10px;
 
-        
+
             padding: 100% 100%;
 
             opacity: 0;
-    
+
             position: absolute;
             top: 50%;
             left: 50%;
             translate: -50% -50%;
-          
+
             z-index: 5;
             cursor: pointer;
-            
+
             filter: brightness(100%) sepia(100%);
             transition: 0.3s ease;
 
@@ -369,9 +369,10 @@ main {
 
             filter: brightness(100%) sepia(100%);
             transition: 0.3s ease;
+
             button {
 
-                
+
                 opacity: 0;
             }
         }
@@ -921,4 +922,262 @@ footer {
     div {
         height: 70px;
     }
+}
+
+
+
+
+
+
+
+
+
+.search_box {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: .3s ease;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+
+
+    .close {
+        align-items: end;
+        text-align: right;
+        justify-content: end;
+        display: flex;
+        margin-top: 25px;
+        margin-left: 77%;
+        width: 25px;
+        height: 25px;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .modal_bg {
+        position: absolute;
+        top: 0px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px;
+        background-color: rgb(0, 0, 0);
+        opacity: 90%;
+    }
+
+    .input_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .close_box {
+        position: absolute;
+        top: 0;
+        // right: 300px;
+        left: 900px;
+
+        .close_button {
+            width: 25px;
+            height: 25px;
+        }
+
+    }
+
+    .search_movie {
+        position: absolute;
+        top: 24px;
+        left: 50%;
+        translate: -50% 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        color: white;
+        font-weight: bold;
+
+        .search_input {
+            width: 500px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            position: relative;
+            outline: none;
+            font-size: 20px;
+            padding: 0 20px;
+            align-items: center;
+        }
+
+        .search__button {
+
+            border: none;
+            background-color: yellow;
+
+            /* #F2F60F */
+            width: 52px;
+            height: 50px;
+            border-radius: 12px;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin-top: .1em;
+
+        }
+
+        .search__button:hover {
+            cursor: pointer;
+        }
+
+        .search__icon {
+            height: 1.3em;
+            width: 1.3em;
+            fill: black;
+        }
+
+
+        .movies_searched {
+
+            display: flex;
+            gap: 30px;
+
+            .movie_box {
+                gap: 10px;
+                width: 500px;
+                display: flex;
+                flex-direction: column;
+                max-height: 548px;
+                overflow-y: scroll;
+
+                .result_item_movie {
+                    background-color: rgb(61, 113, 255);
+                    width: 100%;
+                    height: 137px;
+                    border-radius: 15px;
+                    box-shadow: 0 0 15px black;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+
+                    img {
+                        padding: 0 1%;
+                        height: 90%;
+                        border-radius: 10px;
+                    }
+
+                    .movie_info {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 20px;
+
+                        .movie_info_left {
+                            .movie_name {
+                                font-size: 20px;
+                                font-weight: bold;
+                                color: white;
+                                padding-bottom: 5px;
+                            }
+
+                            .movie_original_name {
+                                color: grey;
+                            }
+
+                            .movie_genre {
+                                color: rgb(242, 246, 15);
+                            }
+                        }
+
+                        .movie_info_right {
+                            width: 50px;
+                            height: 30px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgb(75, 203, 54);
+                            border-radius: 8px;
+
+                            p {
+                                font-size: 20px;
+                                color: white;
+                                font-weight: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .actor_box {
+                gap: 10px;
+                width: 500px;
+                display: flex;
+                flex-direction: column;
+                max-height: 548px;
+                overflow-y: scroll;
+
+                .actor_item {
+                    background-color: rgb(61, 113, 255);
+                    width: 100%;
+                    min-height: 137px;
+                    border-radius: 15px;
+                    box-shadow: 0 0 15px black;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+
+                    .actor_img {
+                        padding: 0 1%;
+                        height: 90%;
+                        border-radius: 10px;
+                    }
+
+                    .actor_title_box {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        padding: 0 20px;
+
+                        .actor_name {
+                            font-size: 20px;
+                            font-weight: bold;
+                            color: white;
+                            padding-bottom: 5px;
+                        }
+
+                        .actor_original_name {
+                            color: grey;
+                        }
+
+                        .actor_post {
+                            color: rgb(242, 246, 15);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.visible {
+    display: block;
 }
