@@ -19,6 +19,17 @@ body {
     scroll-behavior: smooth;
 
 
+    &::after {
+        content: "";
+        display: block;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(#1E2538, #1E253810, #1E2538, #1E2538);
+        position: absolute;
+        bottom: 0px;
+        z-index: -1;
+    }
+
 
     &::-webkit-scrollbar {
         width: 15px;
