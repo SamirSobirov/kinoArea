@@ -56,7 +56,7 @@ export function reload(arr, place) {
             // getData(`/movie/${item.id}/videos`)
             // 	.then(res => setTrailer(res.data.results[0]))
 
-            location.assign(`/pages/movie/?id=${item.id}`)
+            location.assign(`/pages/movie/index.html?id=${item.id}`)
 
         }
     }

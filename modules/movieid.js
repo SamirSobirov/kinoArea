@@ -13,6 +13,7 @@ if (fav_arr.includes(movie_id)) {
     fav_icon.classList.remove('liked')
 }
 
+
 fav_icon.onclick = () => {
     if (fav_arr.includes(movie_id)) {
         fav_arr = fav_arr.filter(id => id !== movie_id)
