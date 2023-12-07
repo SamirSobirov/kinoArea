@@ -83,7 +83,7 @@ export function reload(arr, place) {
 						<img src="${import.meta.env.VITE_BASE_IMG + item.poster_path}" alt="image">
 						<span>${item.vote_average}</span>
 						<a href="/pages/movieid.html?id=${item.id}">
-							<button>Карточка фильма</button>
+							<button></button>
 						</a>
 					</div>
 					<div class="name__genre">
