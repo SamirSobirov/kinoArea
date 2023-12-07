@@ -10,13 +10,8 @@ let trailers__footer = document.querySelector('.trailers__footer')
 let popular_person_cont = document.querySelector('.popular_person_cont')
 let popular_person_cart_cont = document.querySelector('.popular-persons__list')
 let popular_moviesCont = document.querySelector('.popular-movies__slider-container')
-let searcher =  document.querySelector('.popup__search-wrapper_movie')
-
-console.log(searcher);
 
 headerCreate(header)
-
-
 
 
 getData('/movie/popular')
@@ -76,7 +71,7 @@ getData('/movie/upcoming')
 modalToggleActivate()
 
 export function modalToggleActivate() {
- 
+
 }
 
 function sliderAct(data, place, place_className) {
@@ -113,65 +108,54 @@ function sliderAct(data, place, place_className) {
 
 
 
+// //search
+// const search_btn = document.querySelector('button[data-popup="search"]');
+
+// let search_input = document.querySelector('.search_input');
+// let btn_close = document.getElementById("close");
+// let search_box = document.querySelector('.search_box');
+// let results_box = document.querySelector('.movie_box')
+// let actor_box = document.querySelector('.actor_box')
+
+// function debounce(func, timeout = 600) {
+//     let timer;
+//     return (...args) => {
+//         clearTimeout(timer);
+//         timer = setTimeout(() => {
+//             func.apply(this, args);
+//         }, timeout);
+//     };
+// }
 
 
 
+// function saveInput() {
+//     Promise.all([getData(`/search/movie?query=${search_input.value}&page=1`), getData('/genre/movie/list'), getData(`/search/person?query=${search_input.value}`)])
+//         .then(([movies, genres, actors]) => {
+//             reload_search_movie(movies.data.results, results_box, genres.data.genres)
+//             reload_search_actor(actors.data.results, actor_box);
+//         })
+// }
 
 
+// const processChange = debounce(() => saveInput())
 
 
+// search_btn.onclick = () => {
+//     search_box.classList.add('visible');
+//     document.body.style.overflow = 'hidden';
+// };
 
+// console.log(search_btn);
 
+// search_input.onkeyup = () => {
+//     processChange();
+// };
 
+// btn_close.onclick = () => {
+//     search_box.classList.remove('visible');
+//     document.body.style.overflow = 'auto';
 
-//search
-const search_btn = document.querySelector('button[data-popup="search"]');
-
-let search_input = document.querySelector('.search_input');
-let btn_close = document.getElementById("close");
-let search_box = document.querySelector('.search_box');
-let results_box = document.querySelector('.movie_box')
-let actor_box = document.querySelector('.actor_box')
-
-function debounce(func, timeout = 600) {
-    let timer;
-    return (...args) => {
-        clearTimeout(timer);
-        timer = setTimeout(() => {
-            func.apply(this, args);
-        }, timeout);
-    };
-}
-
-
-
-function saveInput() {
-    Promise.all([getData(`/search/movie?query=${search_input.value}&page=1`), getData('/genre/movie/list'), getData(`/search/person?query=${search_input.value}`)])
-        .then(([movies, genres, actors]) => {
-            reload_search_movie(movies.data.results, results_box, genres.data.genres)
-            reload_search_actor(actors.data.results, actor_box);
-        })
-}
-
-
-const processChange = debounce(() => saveInput())
-
-
-search_btn.onclick = () => {
-    search_box.classList.add('visible');
-    document.body.style.overflow = 'hidden';
-};
-
-console.log(search_btn);
-
-search_input.onkeyup = () => {
-    processChange();
-};
-
-btn_close.onclick = () => {
-    search_box.classList.remove('visible');
-    document.body.style.overflow = 'auto';
-
-};
+// };
 
 
