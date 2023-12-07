@@ -15,12 +15,13 @@ getData(`/movie/${movie_id}`)
         body.style.backgroundImage = `url(${import.meta.env.VITE_BASE_IMG + data.backdrop_path})`
 
         let poster = document.querySelector('.first-section__poster')
-        let loc = document.querySelector('.first-section__location-item_active')
-        let title = document.querySelector('.first-section__title')
-        let sub_title = document.querySelector('.first-section__sub-title')
+
         let desrc = document.querySelector('.first-section__txt')
         let rating = document.querySelector('.first-section__header-bottom-rating')
 
+
+        desrc.innerHTML = data.overview
+        
         let rating_view = data.vote_average.toString().replaceAll('.', '').slice(0, 2)
         let year = document.querySelector('#year')
         let country = document.querySelector('#country')
@@ -38,11 +39,7 @@ getData(`/movie/${movie_id}`)
         let premiere_RF = document.querySelector('#premiere_RF')
 
 
-        loc.innerHTML = data.title
-        title.innerHTML = data.original_title
-        sub_title.innerHTML = data.original_title
-        desrc.innerHTML = data.overview
-        rating.firstElementChild.innerHTML = `Рейтинг ожиданий ${rating_view}%`
+
 
         year.innerHTML = data.release_date.split('-').at(0)
         country.innerHTML = ''
