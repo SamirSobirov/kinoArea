@@ -352,7 +352,7 @@
 			};
 		}
 
-
+console.log(search_btn);
 
 		function saveInput() {
 			Promise.all([getData(`/search/movie?query=${search_input.value}&page=1`), getData('/genre/movie/list'), getData(`/search/person?query=${search_input.value}`)])

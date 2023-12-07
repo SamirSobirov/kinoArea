@@ -20,13 +20,15 @@ export function headerCreate(place) {
 			<a href="/pages/liked.html">Избранное</a>
 		</nav>
 		<div class="right">
-			<button data-popup="search">
+			<button id="btn_search" data-popup="search">
 				<img src="/public/icons/search.svg" alt="icon">
 			</button>
 			<button data-popup="sign-in">Войти</button>
 		</div>
     `
 }
+
+
 
 
 let genres
