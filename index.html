@@ -326,7 +326,7 @@
 			color: #fff;
 		}
 	</style>
-	</style>
+
 
 
 	<script>
@@ -334,7 +334,7 @@
 
 
 		//search
-		const search_btn = document.querySelector('button[data-popup="search"]');
+		const search_btn = document.querySelector('#btn_search');
 
 		let search_input = document.querySelector('.search_input');
 		let btn_close = document.getElementById("close");
@@ -352,7 +352,7 @@
 			};
 		}
 
-console.log(search_btn);
+		console.log(search_btn);
 
 		function saveInput() {
 			Promise.all([getData(`/search/movie?query=${search_input.value}&page=1`), getData('/genre/movie/list'), getData(`/search/person?query=${search_input.value}`)])
