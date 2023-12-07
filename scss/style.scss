@@ -1192,3 +1192,44 @@ footer {
 .visible {
     display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+    ul {
+        overflow-x: scroll;
+        color: white;
+        list-style: none;
+        display: flex;
+        gap: 22px;
+        padding-bottom: 10px;
+
+        li {
+            font-size: 1.6vw;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            opacity: 70%;
+            white-space: nowrap;
+        }
+
+        .active {
+            opacity: 100%;
+        }
+
+        li:hover {
+            opacity: 100%;
+        }
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
