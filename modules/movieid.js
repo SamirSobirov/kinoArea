@@ -37,10 +37,12 @@ getData(`/movie/${movie_id}`)
         let profit = document.querySelector('#profit')
         let premiere_world = document.querySelector('#premiere_world')
         let premiere_RF = document.querySelector('#premiere_RF')
+        let title = document.querySelector('.first-section__title')
 
 
 
 
+        title.innerHTML = data.original_title
         year.innerHTML = data.release_date.split('-').at(0)
         country.innerHTML = ''
         tagline.innerHTML = data.title.split('.').at(0)
