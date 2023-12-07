@@ -41,8 +41,8 @@
 			</div>
 			<div class="trailers__main">
 				<div class="trailers__vid trailers__vid_big">
-					<iframe class="trailers__iframe trailers__iframe_big"
-						src="" frameborder="0" allowfullscreen></iframe>
+					<iframe class="trailers__iframe trailers__iframe_big" src="" frameborder="0"
+						allowfullscreen></iframe>
 					<img class="trailers_play-icon" src="/public/icons/play.svg" alt="icon">
 				</div>
 				<div class="trailers__actions">
@@ -146,7 +146,7 @@
 
 
 
-	
+
 
 
 
@@ -219,8 +219,8 @@
 
 
 
-	
-	
+
+
 	<div class="search_box">
 
 		<div class="modal_bg" data-close></div>
@@ -264,57 +264,114 @@
 	</div>
 
 
-	
+
 	<style>
 		.back_img {
-				width: 100%;
-				height: 510px;
-				background: url('../public/images/footer_back_img.svg');
-				margin-top: 40px;
-				position: relative;
-				border-radius: 13px;
-			}
+			width: 100%;
+			height: 510px;
+			background: url('../public/images/footer_back_img.svg');
+			margin-top: 40px;
+			position: relative;
+			border-radius: 13px;
+		}
 
-			.back_img::after {
-				content: '';
-				background: rgba(29, 58, 160, 0.90);
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				z-index: 0;
-				border-radius: 10px;
-			}
+		.back_img::after {
+			content: '';
+			background: rgba(29, 58, 160, 0.90);
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 0;
+			border-radius: 10px;
+		}
 
-			.back_img {
-				position: relative;
-				border-radius: 13px;
-			}
+		.back_img {
+			position: relative;
+			border-radius: 13px;
+		}
 
-			.back_img::after {
-				content: '';
-				background: rgba(29, 58, 160, 0.90);
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				z-index: 0;
-				border-radius: 10px;
-			}
+		.back_img::after {
+			content: '';
+			background: rgba(29, 58, 160, 0.90);
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 0;
+			border-radius: 10px;
+		}
 
-			.footer_text,
-			.footer_main,
-			.footer_end {
-				position: relative;
-				z-index: 1;
-				color: #fff;
-			}
-		</style>
+		.footer_text,
+		.footer_main,
+		.footer_end {
+			position: relative;
+			z-index: 1;
+			color: #fff;
+		}
 	</style>
-	
-	
+	</style>
+
+
+	<script>
+
+
+
+		//search
+		const search_btn = document.querySelector('button[data-popup="search"]');
+
+		let search_input = document.querySelector('.search_input');
+		let btn_close = document.getElementById("close");
+		let search_box = document.querySelector('.search_box');
+		let results_box = document.querySelector('.movie_box')
+		let actor_box = document.querySelector('.actor_box')
+
+		function debounce(func, timeout = 600) {
+			let timer;
+			return (...args) => {
+				clearTimeout(timer);
+				timer = setTimeout(() => {
+					func.apply(this, args);
+				}, timeout);
+			};
+		}
+
+
+
+		function saveInput() {
+			Promise.all([getData(`/search/movie?query=${search_input.value}&page=1`), getData('/genre/movie/list'), getData(`/search/person?query=${search_input.value}`)])
+				.then(([movies, genres, actors]) => {
+					reload_search_movie(movies.data.results, results_box, genres.data.genres)
+					reload_search_actor(actors.data.results, actor_box);
+				})
+		}
+
+
+		const processChange = debounce(() => saveInput())
+
+
+		search_btn.onclick = () => {
+			search_box.classList.add('visible');
+			document.body.style.overflow = 'hidden';
+		};
+
+		console.log(search_btn);
+
+		search_input.onkeyup = () => {
+			processChange();
+		};
+
+		btn_close.onclick = () => {
+			search_box.classList.remove('visible');
+			document.body.style.overflow = 'auto';
+
+		};
+
+
+
+	</script>
 
 	<script type="module" src="modules/main.js"></script>
 </body>
