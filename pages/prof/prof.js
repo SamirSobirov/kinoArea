@@ -25,3 +25,14 @@ export function headerCreate(place) {
 		</div>
     `
 }
+
+
+
+let name = prompt("Введите ваше имя:");
+
+   
+    if (name.charAt(0).toLowerCase() === 'a') {
+        alert("Добро пожаловать в клуб!");
+    } else {
+        alert("Извините, вы не можете войти в клуб.");
+    }
